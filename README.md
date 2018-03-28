@@ -28,7 +28,7 @@ ok      _/C_/Users/ben/dev/golangissue21422     0.047s
 
 3. Open `some_migration.sql` and change `select 1` to `select 2`; save the file.
 4. Re-run `go test -v ./...`
-5. Observe that the output is exactly the same as before i.e. the wrong `select` query is displayed and the code in `main_test.go` has not actually executed again:
+5. Observe that the output is cached i.e. the wrong `select` query is displayed and the code in `main_test.go` has not actually executed again:
 ```
 $ go test -v ./...
 Hey, I ran! The current time is 2018-03-27 17:34:08.1723502 -0700 PDT m=+0.002000201 and the contents of the sql file is: select 1
